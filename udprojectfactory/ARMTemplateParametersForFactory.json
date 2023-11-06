@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "udprojectfactory"
+		},
+		"lsdatalakestorage_accountKey": {
+			"value": ""
+		},
+		"lssqldb_connectionString": {
+			"value": ""
+		},
+		"lssynapse_connectionString": {
+			"value": ""
+		},
+		"lsdatalakestorage_properties_typeProperties_url": {
+			"value": "https://udprojectlake22.dfs.core.windows.net/"
+		}
+	}
+}
