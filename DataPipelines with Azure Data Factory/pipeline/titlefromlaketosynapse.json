@@ -1,0 +1,41 @@
+{
+	"name": "titlefromlaketosynapse",
+	"properties": {
+		"activities": [
+			{
+				"name": "titlefromlaketosynapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "titlefromlaketosynapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-11-06T19:23:55Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

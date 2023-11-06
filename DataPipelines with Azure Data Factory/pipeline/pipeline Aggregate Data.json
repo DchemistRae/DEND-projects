@@ -1,0 +1,53 @@
+{
+	"name": "pipeline Aggregate Data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Dataflow Aggregate Data",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "Dataflow Aggregate Data",
+						"type": "DataFlowReference",
+						"parameters": {
+							"dataflow_param_fiscalyear": {
+								"value": "@pipeline().parameters.pipeline_param",
+								"type": "Expression"
+							}
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"pipeline_param": {
+				"type": "int",
+				"defaultValue": 2021
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-11-06T22:48:06Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

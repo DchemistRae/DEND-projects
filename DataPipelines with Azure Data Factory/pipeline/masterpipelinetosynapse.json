@@ -1,0 +1,153 @@
+{
+	"name": "masterpipelinetosynapse",
+	"properties": {
+		"activities": [
+			{
+				"name": "empdatafromlaketosynapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "empdatafromlaketosynapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "titlefromlaketosynapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "titlefromlaketosynapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "agencyfromlaketosynapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "agencyfromlaketosynapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			},
+			{
+				"name": "payrolldatafromsqltosynapse",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [
+					{
+						"activity": "titlefromlaketosynapse",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "agencyfromlaketosynapse",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "empdatafromlaketosynapse",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "payrolldatafromsqltosynapse",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "lsdatalakestorage",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "adlsnycpayrollraymonda/dirstaging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-11-06T19:44:11Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

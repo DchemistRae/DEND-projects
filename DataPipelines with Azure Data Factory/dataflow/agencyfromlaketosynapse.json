@@ -1,0 +1,56 @@
+{
+	"name": "agencyfromlaketosynapse",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "adflakeagencymaster",
+						"type": "DatasetReference"
+					},
+					"name": "agencylakesource"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "adfdestination_agencymd",
+						"type": "DatasetReference"
+					},
+					"name": "agencydestinationsynapse"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          AgencyID as short,",
+				"          AgencyName as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> agencylakesource",
+				"agencylakesource sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          AgencyID as string,",
+				"          AgencyName as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
+				"     staged: true,",
+				"     allowCopyCommand: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          AgencyID,",
+				"          AgencyName",
+				"     )) ~> agencydestinationsynapse"
+			]
+		}
+	}
+}

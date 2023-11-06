@@ -1,0 +1,9 @@
+{
+	"name": "udprojectfactory",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ca668f7b-848f-4b28-b0a0-72f2edb58264",
+		"tenantId": "16fc35da-3bac-465e-add5-b00c478c959f"
+	}
+}
