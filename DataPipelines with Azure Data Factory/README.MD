@@ -32,10 +32,10 @@ The project utilizes the following tools and services on the Microsoft Azure Pla
 The final structured database optimized for analytics was finally created on Synapse, an OLTP database was also created which will aid periodical data loading into the data warehouse.
 
 ## Screenshots
-![SQL DB created](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots%20%26%20Queries/1.%20Resources/SQL%20DB%20%20%26%20Table%20resource%20-%20created.png)
+![SQL DB created](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots/1.%20Resources/SQL%20DB%20%20%26%20Table%20resource%20-%20created.png)
 
-![Master_pipeline](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots%20%26%20Queries/4.%20Data%20flows%20and%20pipelines/Master_pipeline_run%20-%20completed.png)
+![Master_pipeline](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots/4.%20Data%20flows%20and%20pipelines/Master_pipeline_run%20-%20completed.png)
 
-![Data Validation](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots%20%26%20Queries/5.%20Aggregate%20data%20flow%20and%20pipeline/Pipeline%20-%20Aggregate%20data%20pipeline%20run%20with%20parameter3.png)
+![Data Validation](https://github.com/DchemistRae/DEND-projects/blob/main/DataPipelines%20with%20Azure%20Data%20Factory/Screenshots/5.%20Aggregate%20data%20flow%20and%20pipeline/Pipeline%20-%20Aggregate%20data%20pipeline%20run%20with%20parameter3.png)
 
 
