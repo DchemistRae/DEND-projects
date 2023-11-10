@@ -24,7 +24,6 @@ Divvy, a bike-sharing program in Chicago, Illinois, USA, provides anonymized bik
     - The transformed data, organized in a star schema, is stored in the Azure Data Lake using the Lakehouse architecture. This architecture combines the benefits of data lakes and data warehouses, allowing for schema-on-read and providing flexibility in data exploration and analysis.
 
 ## Tools and Technologies Used
-## Tools and Technologies Used
 The project utilizes the following tools and technologies:
 
 - **Azure Databricks:** A collaborative Apache Spark-based analytics platform.
