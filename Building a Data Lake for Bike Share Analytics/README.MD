@@ -18,7 +18,7 @@ Divvy, a bike-sharing program in Chicago, Illinois, USA, provides anonymized bik
     - Once the data is extracted, it is loaded into the Databricks Lakehouse Filesystem (DBFS) using Spark SQL commands. This step involves creating tables and schemas to store the data in a structured format.
 
 3. **Data Transformation:**
-    -The loaded data undergoes transformation using PySpark. This includes cleaning, filtering, aggregating, and joining the data to prepare it for analysis. The transformed data is transformed into a star schema, which is optimized for analytical purposes.
+    - The loaded data undergoes transformation using PySpark. This includes cleaning, filtering, aggregating, and joining the data to prepare it for analysis. The transformed data is transformed into a star schema, which is optimized for analytical purposes.
 
 4. **Data Lakehouse Architectur:**
     - The transformed data, organized in a star schema, is stored in the Azure Data Lake using the Lakehouse architecture. This architecture combines the benefits of data lakes and data warehouses, allowing for schema-on-read and providing flexibility in data exploration and analysis.
@@ -33,5 +33,5 @@ The project utilizes the following tools and technologies:
 
 ## Image Results
 
-**Data Star Schema**
-![ERP](https://github.com/DchemistRae/DEND-projects/blob/main/Building%20Data%20warehouse%20for%20Bike%20Share%20Data%20Analytics/images/ERP%20diagram.png)
+**Star Schema**
+![ERP](https://github.com/DchemistRae/DEND-projects/blob/main/Building%20a%20Data%20Lake%20for%20Bike%20Share%20Analytics/images/ERP%20diagram.png)
