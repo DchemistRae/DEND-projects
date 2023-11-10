@@ -6,7 +6,7 @@ This project is dedicated to constructing a data warehouse solution using Azure 
 Divvy, a bike-sharing program in Chicago, Illinois, USA, provides anonymized bike trip data, allowing riders to unlock bikes at various city stations. The data comprises:
 
 - **Payments Data:** Ride payments information.
-- **Riders Data:** Generated customer information for project purposes.
+- **Riders Data:** Generated fake customer information for project purposes.
 - **Stations Data:** Longitudes, latitudes, and station names information.
 - **Trips Data:** Customer trip facts.
 
