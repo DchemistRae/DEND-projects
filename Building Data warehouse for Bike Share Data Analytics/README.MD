@@ -1,4 +1,4 @@
-# Building a Data Warehouse for Bike Share Data Analytics
+# 🚀 Building a Data Warehouse for Bike Share Data Analytics
 
 This project is dedicated to constructing a data warehouse solution using Azure Synapse Analytics for comprehensive bike share data analytics. The primary objective is to establish a robust data warehouse, enabling analysts to derive meaningful insights from the available datasets.
 
@@ -42,10 +42,6 @@ The project leverages the following tools and services:
 
 ## Image Results
 
-**Data schema at the start of the project:**
-![Data schema at the start of the project](image_link)
+**DWH Star Schema**
+![ERP](https://github.com/DchemistRae/DEND-projects/blob/main/Building%20Data%20warehouse%20for%20Bike%20Share%20Data%20Analytics/images/ERP%20diagram.png)
 
-<details>
-  <summary><strong>Final star schema in the built data warehouse</strong></summary>
-  ![Final star schema in the built data warehouse](image2_link)
-</details>
