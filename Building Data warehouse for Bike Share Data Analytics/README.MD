@@ -37,7 +37,6 @@ The project leverages the following tools and services:
 
 - **Python:** Version 3.6 and above to load data into the Postgres database on Azure.
 - **Postgres Database:** Simulated OLTP database for production scenario emulation.
-- **Lucid Charts:** Used for designing the final star schema.
 - **Synapse Analytics:** The ultimate data warehouse where all data is loaded for analytics purposes.
 
 ## Image Results
